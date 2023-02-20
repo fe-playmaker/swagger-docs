@@ -16,13 +16,15 @@ export interface ProfileHeader {
   lastActivity: DateTime
   team: string
   status: {
-    type: 'searchingForClub' | string
-    description?: string
-    localization?: {
-      name: string
-      range: Int32
+    searchingForClub?: { 
+      description: string
+      localization: {
+        name: string
+        range: Int32
+      }
+      expectations: string[]
+      additional?: string
     }
-    expectations?: string[]
-    additional?: string
+    answerPercentage: Int32
   }
 }
