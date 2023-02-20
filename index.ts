@@ -30,7 +30,7 @@ app.get("/api-docs-json", (req: any, res: any) => {
   res.json(openApiJson)
 })
 
-app.listen(PORT, (error: any) =>{
+app.listen(PORT,'0.0.0.0', (error: any) =>{
   if(!error){
       console.log("Server is Successfully Running, and App is listening on port "+ PORT)}
   else {
