@@ -1,4 +1,4 @@
-import { body, endpoint, pathParams, request, response, String } from "@airtasker/spot";
+import { body, endpoint, pathParams, queryParams, request, response, String } from "@airtasker/spot";
 import { ProfileMatches } from "./types"
 
 @endpoint({
@@ -12,6 +12,13 @@ class PlayerProfileMatches {
     @pathParams
     pathParams: {
       id: String;
+    },
+    @queryParams
+    queryParams: {
+      seasonIds?: string[]
+      teamIds?: string[]
+      competitionLevelIds?: string[]
+      playerPlayed?: boolean
     }
   ) {}
 
