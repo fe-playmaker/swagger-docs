@@ -4,6 +4,7 @@ import { api } from "@airtasker/spot";
 import "./players/header"
 import "./players/career"
 import "./players/matches"
+import "./players/pm-score"
 
 import "./competition-levels/list"
 import "./teams/list"
