@@ -13,7 +13,7 @@ export interface ProfileHeader {
   position: string
   competition: string
   ownProfile: boolean
-  lastActivity: DateTime
+  lastActivity?: DateTime
   team: string
   status: {
     searchingForClub?: { 

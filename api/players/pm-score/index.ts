@@ -21,6 +21,6 @@ class PlayerProfilePMScore {
 
   @response({ status: 201 })
   successfulResponse(
-    @body body: ProfilePMScore[]
+    @body body: ProfilePMScore
   ) {}
 }

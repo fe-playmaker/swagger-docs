@@ -28,6 +28,6 @@ class PlayerProfileMatches {
    */
   @response({ status: 201 })
   successfulResponse(
-    @body body: ProfileMatches
+    @body body: ProfileMatches[]
   ) {}
 }
