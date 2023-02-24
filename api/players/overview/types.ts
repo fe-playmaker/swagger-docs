@@ -1,5 +1,5 @@
 import { ProfileMatches } from '../matches/types'
-import { Int32 } from '@airtasker/spot'
+import { Int32, Date } from '@airtasker/spot'
 
 export interface ProfileOverview {
 	inShort: {
@@ -7,7 +7,7 @@ export interface ProfileOverview {
 		icon: string
 	}[]
 	transfers: {
-		id: Int32
+		id: string
 		from: {
 			logo: string
 			name: string
@@ -17,18 +17,20 @@ export interface ProfileOverview {
 			name: string
 		}
 		type: string
-		date: string
+		date: Date
 	}[]
 	similarPlayers: {
 		name: string
 		image: string
-		score: Int32
 		premium: boolean
 		age: Int32
-		scoreTrend: 'up' | 'down'
 		position: string
 		team: string
 		competition: string
+		score: {
+			value: Int32
+			trend: 'up' | 'down'
+		}
 	}[]
 	experience: {
 		data: {
@@ -57,8 +59,8 @@ export interface ProfileOverview {
 		location: string
 		age: Int32
 		name: string
-		clubLogo: string
-		video: string
+		clubLogo?: string
+		video?: string
 	}
 	lastMatch: {
 		playerStandedOut: boolean

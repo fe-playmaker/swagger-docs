@@ -20,5 +20,5 @@ class PlayerProfileOverview {
 	) {}
 
 	@response({ status: 201 })
-	successfulResponse(@body body: ProfileOverview[]) {}
+	successfulResponse(@body body: ProfileOverview) {}
 }
