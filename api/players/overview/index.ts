@@ -6,7 +6,7 @@ import { ProfileOverview } from './types'
 	path: '/players/:id/overview',
 	tags: ['Players'],
 })
-class PlayerProfilePMScore {
+class PlayerProfileOverview {
 	@request
 	request(
 		@pathParams
