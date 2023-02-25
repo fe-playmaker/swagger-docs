@@ -1,4 +1,5 @@
 import { ProfileMatches } from '../matches/types'
+import { ProfileCareer } from '../career/types'
 import { Int32, Date } from '@airtasker/spot'
 
 export interface ProfileOverview {
@@ -68,6 +69,7 @@ export interface ProfileOverview {
 		}
 		match: ProfileMatches
 	}
+	career: ProfileCareer
 	regularity: {
 		additional: {
 			type: 'key' | 'regular'
