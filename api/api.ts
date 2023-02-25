@@ -1,19 +1,18 @@
-import { api } from "@airtasker/spot";
+import { api } from '@airtasker/spot'
 
+import './players/header'
+import './players/career'
+import './players/matches'
+import './players/pm-score'
+import './players/overview'
 
-import "./players/header"
-import "./players/career"
-import "./players/matches"
-import "./players/pm-score"
+import './competition-levels/list'
+import './teams/list'
+import './seasons/list'
 
-import "./competition-levels/list"
-import "./teams/list"
-import "./seasons/list"
+import './auth/login'
 
-import "./auth/login"
+import './account/get'
 
-import "./account/get"
-
-@api({ name: "PlayMaker 2_0" })
+@api({ name: 'PlayMaker 2_0' })
 class Api {}
-
