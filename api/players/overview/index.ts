@@ -15,7 +15,7 @@ class PlayerProfileOverview {
 		},
 		@queryParams
 		queryParams: {
-			show: 'last5Matches' | 'lastRound' | 'lastSeason' | 'last2Years' | 'last3Years'
+			pmScoreGraph: 'last5Matches' | 'lastRound' | 'lastSeason' | 'last2Years' | 'last3Years'
 		}
 	) {}
 
