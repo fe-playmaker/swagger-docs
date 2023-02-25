@@ -69,6 +69,7 @@ export interface ProfileOverview {
 		}
 		match: ProfileMatches
 	}
+	career: ProfileCareer
 	regularity: {
 		additional: {
 			type: 'key' | 'regular'
@@ -81,5 +82,4 @@ export interface ProfileOverview {
 		bench: Int32
 		outsideCadre: Int32
 	}
-	career: ProfileCareer
 }
