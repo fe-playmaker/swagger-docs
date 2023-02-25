@@ -8,10 +8,7 @@ export interface ProfilePMScore {
     ofLastMatches: Int32
     info: string
   }
-  scoreGraph: {
-    player: Int32[]
-    avgCompetition: Int32[]
-  }
+  scoreGraph: 'unknown'
   events : {
     value: number
     trend: 'up' | 'down'

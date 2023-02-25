@@ -59,15 +59,15 @@ export interface ProfileOverview {
 		weight: Int32
 		location: string
 		age: Int32
-		name: string
-		clubLogoUrl?: string
+		firstName: string
+		lastName: string
 		videoUrl?: string
 	}
-	lastMatch: {
+	lastMatches: {
 		additional: {
 			type: 'standedOut' | 'playedWorse'
 		}
-		match: ProfileMatches
+		matches: ProfileMatches
 	}
 	career: ProfileCareer
 	regularity: {
@@ -81,5 +81,13 @@ export interface ProfileOverview {
 		fromBench: Int32
 		bench: Int32
 		outsideCadre: Int32
+	}
+	pmScore: {
+		mainScore: Int32
+		score: {
+			value: number
+			trend: 'up' | 'down'
+		}
+		graphData: 'unknown'
 	}
 }
