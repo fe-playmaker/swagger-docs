@@ -62,11 +62,17 @@ export interface ProfileOverview {
 		clubLogoUrl?: string
 		videoUrl?: string
 	}
-	lastMatch?: {
-		playerStandedOut: boolean
+	lastMatch: {
+		additional: {
+			type: 'standedOut' | 'playedWorse'
+		}
 		match: ProfileMatches
 	}
-	regularity?: {
+	regularity: {
+		additional: {
+			type: 'key' | 'regular'
+			teamLogo?: string
+		}
 		totalParticipationPercentage: Int32
 		ofMatches: Int32
 		firstEleven: Int32
