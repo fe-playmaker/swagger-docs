@@ -1,4 +1,5 @@
 import { ProfileMatches } from '../matches/types'
+import { ProfileCareer } from '../career/types'
 import { Int32, Date } from '@airtasker/spot'
 
 export interface ProfileOverview {
@@ -80,4 +81,5 @@ export interface ProfileOverview {
 		bench: Int32
 		outsideCadre: Int32
 	}
+	career: ProfileCareer
 }
