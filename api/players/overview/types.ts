@@ -9,11 +9,11 @@ export interface ProfileOverview {
 	transfers: {
 		id: string
 		from: {
-			logo: string
+			logoUrl: string
 			name: string
 		}
 		to: {
-			logo: string
+			logoUrl: string
 			name: string
 		}
 		type: string
@@ -21,7 +21,7 @@ export interface ProfileOverview {
 	}[]
 	similarPlayers: {
 		name: string
-		image: string
+		imageUrl: string
 		premium: boolean
 		age: Int32
 		position: string
@@ -59,14 +59,14 @@ export interface ProfileOverview {
 		location: string
 		age: Int32
 		name: string
-		clubLogo?: string
-		video?: string
+		clubLogoUrl?: string
+		videoUrl?: string
 	}
-	lastMatch: {
+	lastMatch?: {
 		playerStandedOut: boolean
 		match: ProfileMatches
 	}
-	regularity: {
+	regularity?: {
 		totalParticipationPercentage: Int32
 		ofMatches: Int32
 		firstEleven: Int32
