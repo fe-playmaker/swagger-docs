@@ -15,7 +15,7 @@ export interface ProfileMatches {
       score: Int32
       mainTeam: boolean
     }
-    wideo?: string
+    wideoUrl?: string
     date: Date
     competition: string
     status: 'win' | 'loss' | 'draw'

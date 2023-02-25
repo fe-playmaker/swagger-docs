@@ -22,7 +22,7 @@ export interface ProfileOverview {
 	}[]
 	similarPlayers: {
 		name: string
-		imageUrl: string
+		avatarUrl: string
 		premium: boolean
 		age: Int32
 		position: string
@@ -73,7 +73,7 @@ export interface ProfileOverview {
 	regularity: {
 		additional: {
 			type: 'key' | 'regular'
-			teamLogo?: string
+			teamLogoUrl?: string
 		}
 		totalParticipationPercentage: Int32
 		ofMatches: Int32
