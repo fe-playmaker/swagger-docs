@@ -4,7 +4,7 @@ import { ProfileOverview, ProfileOverviewLastMatches, ProfileOverviewPMScore, Pr
 @endpoint({
 	method: 'GET',
 	path: '/players/:id/overview',
-	tags: ['Players', 'Overview'],
+	tags: ['Players'],
 })
 class PlayerProfileOverview {
 	@request
