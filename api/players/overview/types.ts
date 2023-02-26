@@ -101,13 +101,4 @@ export interface ProfileOverview {
 		videoUrl?: string
 	}
 	career: ProfileCareer
-	// pmScore: {
-	// 	score: Int32
-	// 	lastScore: {
-	// 		value: number
-	// 		trend: 'up' | 'down'
-	// 		ofLastMatches: Int32
-	// 	}
-	// 	graphData: 'unknown'
-	// }
 }
