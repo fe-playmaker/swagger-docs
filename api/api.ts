@@ -7,8 +7,8 @@ import './players/pm-score'
 import './players/overview'
 
 import './competition-levels/list'
-import './teams/list'
 import './seasons/list'
+import './teams/list'
 
 import './auth/login'
 

@@ -1,6 +1,37 @@
 import { ProfileMatches } from '../matches/types'
 import { ProfileCareer } from '../career/types'
 import { Int32, Date } from '@airtasker/spot'
+import { ProfilePMScore } from '../pm-score/types'
+
+export interface ProfileOverviewRegularity {
+	additional: {
+		type: 'key' | 'regular'
+		teamLogoUrl?: string
+	}
+	totalParticipationPercentage: Int32
+	ofMatches: Int32
+	firstEleven: Int32
+	fromBench: Int32
+	bench: Int32
+	outsideCadre: Int32
+}
+
+export interface ProfileOverviewLastMatches {
+	additional: {
+		type: 'standedOut' | 'playedWorse'
+	}
+	data: ProfileMatches
+}
+
+export interface ProfileOverviewPMScore {
+	score: Int32
+  lastScore: {
+    value: number
+    trend: 'up' | 'down'
+    ofLastMatches: Int32
+  }
+  scoreGraph: 'unknown'
+}
 
 export interface ProfileOverview {
 	inShort: {
@@ -21,6 +52,7 @@ export interface ProfileOverview {
 		date: Date
 	}[]
 	similarPlayers: {
+		id: string
 		name: string
 		avatarUrl: string
 		premium: boolean
@@ -52,6 +84,11 @@ export interface ProfileOverview {
 		}
 	}
 	playerData: {
+		team: {
+			id: string
+			name: string
+			competition: string
+		}
 		altPosition: string
 		position: string
 		betterLeg: string
@@ -63,32 +100,14 @@ export interface ProfileOverview {
 		lastName: string
 		videoUrl?: string
 	}
-	lastMatches: {
-		additional: {
-			type: 'standedOut' | 'playedWorse'
-		}
-		matches: ProfileMatches
-	}
 	career: ProfileCareer
-	regularity: {
-		additional: {
-			type: 'key' | 'regular'
-			teamLogoUrl?: string
-		}
-		totalParticipationPercentage: Int32
-		ofMatches: Int32
-		firstEleven: Int32
-		fromBench: Int32
-		bench: Int32
-		outsideCadre: Int32
-	}
-	pmScore: {
-		score: Int32
-		lastScore: {
-			value: number
-			trend: 'up' | 'down'
-			ofLastMatches: Int32
-		}
-		graphData: 'unknown'
-	}
+	// pmScore: {
+	// 	score: Int32
+	// 	lastScore: {
+	// 		value: number
+	// 		trend: 'up' | 'down'
+	// 		ofLastMatches: Int32
+	// 	}
+	// 	graphData: 'unknown'
+	// }
 }
