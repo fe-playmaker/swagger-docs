@@ -1,12 +1,20 @@
-import { body, endpoint, response } from "@airtasker/spot";
+import { body, endpoint, queryParams, request, response } from "@airtasker/spot";
 import { CommonListItem } from "../types";
 
 @endpoint({
   method: "GET",
-  path: "/teams/list",
-  tags: ["Teams"]
+  path: "/seasons/list",
+  tags: ["Seasons"]
 })
-class TeamsList {
+class SeasonsList {
+	@request
+	request(
+		@queryParams
+    queryParams: {
+      playerId?: string
+    }
+	) {}
+
   @response({ status: 201 })
   successfulResponse(
     @body body: CommonListItem[]

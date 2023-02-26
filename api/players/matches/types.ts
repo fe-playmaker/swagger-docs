@@ -3,6 +3,7 @@ import { Date, Int32 } from "@airtasker/spot"
 export interface ProfileMatches {
   season: string
   matches: {
+    id: string
     homeTeam: {
       logoUrl: string
       name: string

@@ -1,4 +1,4 @@
-import { body, endpoint, response } from "@airtasker/spot";
+import { body, endpoint, queryParams, request, response } from "@airtasker/spot";
 import { CommonListItem } from "../types";
 
 @endpoint({
@@ -7,6 +7,14 @@ import { CommonListItem } from "../types";
   tags: ["Competition-levels"]
 })
 class CompetitionLevelsList {
+	@request
+	request(
+		@queryParams
+    queryParams: {
+      playerId?: string
+    }
+	) {}
+
   @response({ status: 201 })
   successfulResponse(
     @body body: CommonListItem[]
