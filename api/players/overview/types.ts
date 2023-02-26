@@ -83,10 +83,11 @@ export interface ProfileOverview {
 		outsideCadre: Int32
 	}
 	pmScore: {
-		mainScore: Int32
-		score: {
+		score: Int32
+		lastScore: {
 			value: number
 			trend: 'up' | 'down'
+			ofLastMatches: Int32
 		}
 		graphData: 'unknown'
 	}

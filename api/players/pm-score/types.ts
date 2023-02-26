@@ -6,7 +6,6 @@ export interface ProfilePMScore {
     value: number
     trend: 'up' | 'down'
     ofLastMatches: Int32
-    info: string
   }
   scoreGraph: 'unknown'
   events : {
