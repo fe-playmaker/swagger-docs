@@ -22,7 +22,7 @@ export interface ProfileOverview {
 	}[]
 	similarPlayers: {
 		name: string
-		imageUrl: string
+		avatarUrl: string
 		premium: boolean
 		age: Int32
 		position: string
@@ -59,21 +59,21 @@ export interface ProfileOverview {
 		weight: Int32
 		location: string
 		age: Int32
-		name: string
-		clubLogoUrl?: string
+		firstName: string
+		lastName: string
 		videoUrl?: string
 	}
-	lastMatch: {
+	lastMatches: {
 		additional: {
 			type: 'standedOut' | 'playedWorse'
 		}
-		match: ProfileMatches
+		matches: ProfileMatches
 	}
 	career: ProfileCareer
 	regularity: {
 		additional: {
 			type: 'key' | 'regular'
-			teamLogo?: string
+			teamLogoUrl?: string
 		}
 		totalParticipationPercentage: Int32
 		ofMatches: Int32
@@ -81,5 +81,14 @@ export interface ProfileOverview {
 		fromBench: Int32
 		bench: Int32
 		outsideCadre: Int32
+	}
+	pmScore: {
+		score: Int32
+		lastScore: {
+			value: number
+			trend: 'up' | 'down'
+			ofLastMatches: Int32
+		}
+		graphData: 'unknown'
 	}
 }
