@@ -44,13 +44,13 @@ export interface ProfileMatches {
   }
   avgMatch: {
     minutes: Int32
-    goals?: Int32
-    clearAccounts?: Int32
+    goals?: number
+    clearAccounts?: number
     score: {
       value: number
       trend: 'up' | 'down'
     }
-    yellowCards: Int32
-    redCards: Int32
+    yellowCards: number
+    redCards: number
   }
 }
