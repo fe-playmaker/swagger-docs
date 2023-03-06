@@ -25,12 +25,12 @@ export interface ProfileOverviewLastMatches {
 
 export interface ProfileOverviewPMScore {
 	score: Int32
-  lastScore: {
-    value: number
-    trend: 'up' | 'down'
-    ofLastMatches: Int32
-  }
-  scoreGraph: 'unknown'
+	lastScore: {
+		value: number
+		trend: 'up' | 'down'
+		ofLastMatches: Int32
+	}
+	scoreGraph: 'unknown'
 }
 
 export interface ProfileOverview {
@@ -89,8 +89,26 @@ export interface ProfileOverview {
 			name: string
 			competition: string
 		}
-		altPosition: string
-		position: string
+		altPosition?:
+			| 'Napastnik'
+			| 'Lewy Pomocnik'
+			| 'Środkowy pomocnik ofensywny'
+			| 'Środkowy pomocnik'
+			| 'Środkowy pomocnik defensywny'
+			| 'Lewy obrońca'
+			| 'Środkowy obrońca'
+			| 'Prawy obrońca'
+			| 'Bramkarz'
+		position?:
+			| 'Napastnik'
+			| 'Lewy Pomocnik'
+			| 'Środkowy pomocnik ofensywny'
+			| 'Środkowy pomocnik'
+			| 'Środkowy pomocnik defensywny'
+			| 'Lewy obrońca'
+			| 'Środkowy obrońca'
+			| 'Prawy obrońca'
+			| 'Bramkarz'
 		betterLeg: string
 		height: Int32
 		weight: Int32
